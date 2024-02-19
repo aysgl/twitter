@@ -1,0 +1,226 @@
+body {
+  background-color: rgb(0, 0, 0) !important;
+}
+.menu {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+
+  .list-group {
+    height: 75vh;
+    position: relative;
+    display: table;
+    justify-content: space-around;
+    &-item {
+      background-color: transparent;
+      border: none;
+      border-radius: 2rem !important;
+      width: fit-content;
+      cursor: pointer;
+      font-size: 18px;
+      &:hover {
+        background-color: #181818;
+      }
+      &:last-child {
+        background-color: #1d9bf0;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        @media screen and (min-width: 1200px) {
+          svg {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 1200px) {
+          height: 50px;
+          width: 50px;
+          padding: 0px;
+        }
+      }
+      svg {
+        width: 26px;
+        height: 26px;
+        margin-right: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .list-group-item {
+      width: 50px;
+      height: 50px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 26px;
+        height: 26px;
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.add-post {
+  textarea {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  svg {
+    fill: #1d9bf0;
+  }
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  .nav-item {
+    padding: 1px 0px;
+    &:hover {
+      background-color: #181818;
+      cursor: pointer;
+    }
+    .nav-link {
+      margin: 0 auto;
+      font-size: 0.9rem;
+      color: gray;
+      &.active {
+        font-weight: bold;
+        background-color: transparent !important;
+        border-bottom: 3px solid #1d9bf0;
+        width: fit-content;
+        border-radius: 0;
+        padding: 10px 0px;
+      }
+    }
+    &:last-child {
+      width: 60px;
+      flex: none;
+    }
+  }
+}
+
+.trending,
+.whotofollow {
+  .list-group {
+    .list-group-item {
+      background-color: #16181c !important;
+      border: 0;
+      .small {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.search {
+  input {
+    border-radius: 2rem;
+    border: none;
+    margin-top: 0.25rem;
+  }
+}
+
+.subscribe {
+  background-color: #16181c;
+}
+
+.login {
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    svg {
+      width: 50px !important;
+    }
+  }
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-right: 10px;
+  background-color: #1d9bf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post {
+  .action-button {
+    display: flex;
+    flex-direction: row;
+    color: #6f7478;
+    font-size: 13px;
+    cursor: pointer;
+    svg {
+      height: 20px;
+      fill: #6f7478;
+    }
+    span {
+      padding: 10px;
+      border-radius: 30px;
+    }
+    span:nth-child(1):hover {
+      svg {
+        fill: #1d9bf0;
+      }
+      background-color: rgba(#1d9bf0, 0.3);
+      color: #1d9bf0;
+    }
+
+    span:nth-child(2):hover {
+      svg {
+        fill: #38dc6d;
+      }
+      background-color: rgba(#38dc6d, 0.3);
+      color: #38dc6d;
+    }
+    span:nth-child(3):hover {
+      svg {
+        fill: #ed187a;
+      }
+      background-color: rgba(#ed187a, 0.3);
+      color: #ed187a;
+    }
+    span:nth-child(4):hover {
+      svg {
+        fill: #1d9bf0;
+      }
+      background-color: rgba(#1d9bf0, 0.3);
+      color: #1d9bf0;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: #1d9bf0 !important;
+}
+.text-primary,
+.btn-link {
+  color: #1d9bf0 !important;
+  text-decoration: none;
+}
+
+.border,
+.border-bottom,
+.border-end,
+.border-start {
+  border-color: #2f3336 !important;
+}
+
+.img-twitter {
+  max-height: 400px;
+  object-fit: cover;
+}
