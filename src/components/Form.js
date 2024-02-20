@@ -74,7 +74,9 @@ const Form = () => {
             <form onSubmit={handleSubmit}>
                 <div className='row'>
                     <div className='col-1'>
-                        <img className='user' src={userData?.photoURL} srcSet={userData?.photoURL} alt="" />
+                        {userData?.photoURL &&
+                            <img className='user' src={userData?.photoURL} srcSet={userData?.photoURL} aria-hidden="true" alt={userData?.displayName} />
+                        }
                     </div>
                     <div className='col-11'>
                         <div className='border-bottom ms-3'>

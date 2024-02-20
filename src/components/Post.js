@@ -36,7 +36,7 @@ const Post = () => {
                 <div key={tweet?.id} className='border-bottom p-4 d-flex'>
                     {tweet?.user?.photo ? (
                         <div>
-                            <img className='user' src={tweet?.user?.photo} srcSet={tweet?.user?.photo} alt="User" />
+                            <img className='user' src={tweet?.user?.photo} srcSet={tweet?.user?.photo} alt={tweet?.user?.name} aria-hidden="true" />
                         </div>
                     ) : (
                         <div className="user">{tweet?.user?.name.charAt(0).toUpperCase()}</div>

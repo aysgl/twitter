@@ -9,11 +9,11 @@ body {
   position: fixed;
 
   .list-group {
-    height: 75vh;
     position: relative;
     display: table;
     justify-content: space-around;
     &-item {
+      padding: 16px;
       background-color: transparent;
       border: none;
       border-radius: 2rem !important;
@@ -22,6 +22,9 @@ body {
       font-size: 18px;
       &:hover {
         background-color: #181818;
+      }
+      &:first-child {
+        background-color: transparent !important;
       }
       &:last-child {
         background-color: #1d9bf0;

@@ -21,11 +21,10 @@ const Menu = () => {
     const auth = getAuth();
 
     const handleLogout = () => {
-        localStorage.removeItem('userData');
-        clearUserDataFromLocalStorage(userData)
-        navigate('/login');
         signOut(auth).then(() => {
-            console.log("çıkış başarılı")
+            localStorage.removeItem('userData');
+            clearUserDataFromLocalStorage(userData)
+            navigate('/login');
         }).catch((error) => {
             console.log("çıkış hatalı")
         });
@@ -72,7 +71,7 @@ const Menu = () => {
             </ul>
             <ul className='list-group mx-4 h-100 d-flex justify-content-end mb-3' onClick={handleLogout}>
                 <li className='list-group-item bg-transparent'>
-                    <img className='user me-0' src={userData?.photoURL} srcSet={userData?.photoURL} />
+                    <img className='user me-0' src={userData?.photoURL} srcSet={userData?.photoURL} aria-hidden="true" alt={userData?.displayName} />
                 </li>
             </ul>
         </div>

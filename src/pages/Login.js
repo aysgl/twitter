@@ -25,7 +25,7 @@ const Login = () => {
             .then(data => {
                 localStorage.setItem("token", data.user.refreshToken)
                 toast.success("Logged in successfully")
-                navigate("/home")
+                navigate("/")
             }).catch((err) => console.log(err))
     }
 
